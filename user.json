@@ -1,0 +1,19 @@
+{
+  "theme": "Default",
+  "editorKeybindings": "sublime",
+  "editorTheme": "pex",
+  "editorTabSize": 2,
+  "hideFullscreenGui": false,
+  "graphMetadata": {
+    "particles-01": {
+      "offset": [
+        -800.6086321073434,
+        -1393.9042224184923
+      ],
+      "zoomLevel": 1.183247361166888,
+      "sceneRatio": 0.6,
+      "canvasRatio": 0.4,
+      "layout": "default"
+    }
+  }
+}

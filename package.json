@@ -1,0 +1,29 @@
+{
+  "name": "pex-19012-paricles-from-mesh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcin Ignac <marcin.ignac@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@thi.ng/hdom": "^7.2.7",
+    "@thi.ng/paths": "^2.0.9",
+    "canvas-screenshot": "^1.1.1",
+    "fit-rect": "^1.0.3",
+    "pex-cam": "^2.7.1",
+    "pex-color": "^1.1.1",
+    "pex-context": "^2.8.0",
+    "pex-geom": "^2.0.2",
+    "pex-gui": "^2.3.0",
+    "pex-io": "^2.1.0",
+    "pex-math": "^3.0.0-2",
+    "pex-nodes": "^0.11.0",
+    "pex-random": "^1.0.1",
+    "pex-renderer": "^3.0.0-33",
+    "primitive-cube": "^2.0.1",
+    "primitive-sphere": "^3.0.0"
+  }
+}

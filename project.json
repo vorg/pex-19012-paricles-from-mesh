@@ -1,0 +1,21 @@
+{
+  "name": "PEX-19012-Paricles-from-Mesh",
+  "dependencies": [
+    "@thi.ng/paths",
+    "@thi.ng/hdom",
+    "canvas-screenshot",
+    "fit-rect",
+    "pex-cam",
+    "pex-color",
+    "pex-context",
+    "pex-geom",
+    "pex-gui",
+    "pex-io",
+    "pex-math",
+    "pex-nodes",
+    "pex-random",
+    "pex-renderer",
+    "primitive-cube",
+    "primitive-sphere"
+  ]
+}

@@ -1,0 +1,2886 @@
+{
+  "id": "ed3eeb30-7165-11e9-a9b8-cbaa3d1782c6",
+  "name": "particles-01",
+  "nodes": [
+    {
+      "id": "AID2CKnOo",
+      "name": "Context",
+      "x": 540,
+      "y": 405,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "resolution",
+          "public": true,
+          "value": "2048 x 1024 - FullHD-ish",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "kfmT-VyWHf",
+      "name": "Debug",
+      "x": 540,
+      "y": 465,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "AID2CKnOo",
+            "port": "out"
+          }
+        },
+        {
+          "name": "debug",
+          "public": true,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "_tzI7jJi_D",
+      "name": "Time",
+      "x": 540,
+      "y": 510,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "kfmT-VyWHf",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bN_TPJUmkx",
+      "name": "GUI",
+      "x": 1650,
+      "y": 1005,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "8U0sxHq_mz",
+      "name": "Sequence",
+      "x": 525,
+      "y": 585,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "_tzI7jJi_D",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ViZ_R-BjRJ",
+      "name": "Camera",
+      "x": 30,
+      "y": 1845,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "pevpfF8qRN",
+            "port": "captureOut"
+          }
+        }
+      ]
+    },
+    {
+      "id": "x32OtJbnYx",
+      "name": "ShowTexture",
+      "x": 300,
+      "y": 2205,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "LOGUPwAeGL",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "JSXSDA66xl",
+      "name": "TEMPLATE Simples Draw Cmd",
+      "x": 1650,
+      "y": 1095,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "o76SMQkvLK",
+      "name": "Threshold",
+      "x": 360,
+      "y": 1815,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "pevpfF8qRN",
+            "port": "out"
+          }
+        },
+        {
+          "name": "threshold",
+          "public": true,
+          "value": 0.4,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "jI_R_9jWnt",
+      "name": "Texture",
+      "x": 60,
+      "y": 1920,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "url",
+          "public": true,
+          "value": "assets/fire_gradient_hdr.png",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "RQkbZBSqCz",
+      "name": "Texture",
+      "x": 150,
+      "y": 1950,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "url",
+          "public": false,
+          "value": "assets/glow.png",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "q6XSMOOEpQ",
+      "name": "MipBloom",
+      "x": 360,
+      "y": 1905,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "o76SMQkvLK",
+            "port": "out"
+          }
+        },
+        {
+          "name": "instensity",
+          "public": false,
+          "value": 1.35,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "LOGUPwAeGL",
+      "name": "Add",
+      "x": 300,
+      "y": 2130,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "pevpfF8qRN",
+            "port": "out"
+          }
+        },
+        {
+          "name": "inB",
+          "public": false,
+          "source": {
+            "id": "q6XSMOOEpQ",
+            "port": "out"
+          }
+        },
+        {
+          "name": "intensity",
+          "public": true,
+          "value": 0.086,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "9ecDLG0GQk",
+      "name": "Resource Manager",
+      "x": 1650,
+      "y": 1050,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "pevpfF8qRN",
+      "name": "RenderToTexture",
+      "x": 75,
+      "y": 1695,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "w2H9_iUCJW",
+      "name": "Particles",
+      "x": 60,
+      "y": 2145,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "ViZ_R-BjRJ",
+            "port": "out"
+          }
+        },
+        {
+          "name": "colorTexture",
+          "public": false,
+          "script": "",
+          "source": {
+            "id": "jI_R_9jWnt",
+            "port": "texture"
+          }
+        },
+        {
+          "name": "spriteTexture",
+          "public": false,
+          "script": "",
+          "source": {
+            "id": "RQkbZBSqCz",
+            "port": "texture"
+          }
+        },
+        {
+          "name": "noiseScale",
+          "public": false,
+          "value": 0.4,
+          "script": ""
+        },
+        {
+          "name": "reset",
+          "public": true,
+          "script": ""
+        },
+        {
+          "name": "paused",
+          "public": false,
+          "value": false,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "h_iXQdLT6",
+      "name": "Renderer",
+      "x": 270,
+      "y": 765,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "8U0sxHq_mz",
+            "port": "out1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5q_Xph5uJ",
+      "name": "Transform",
+      "x": 360,
+      "y": 930,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "scale",
+          "public": false,
+          "value": [
+            1,
+            1,
+            1
+          ],
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "R45ptrRXz",
+      "name": "Material",
+      "x": 375,
+      "y": 975,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "5q_Xph5uJ",
+            "port": "out"
+          }
+        },
+        {
+          "name": "baseColor",
+          "public": true,
+          "value": [
+            0.9999999999999524,
+            1.000000000000017,
+            1.0000000000000127,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "emissiveColor",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "roughness",
+          "public": false,
+          "value": 0.2,
+          "script": ""
+        },
+        {
+          "name": "metallic",
+          "public": false,
+          "value": 0.2,
+          "script": ""
+        },
+        {
+          "name": "baseColorMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "emissiveColorMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "normalMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "metallicMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "roughnessMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "wireframe",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "castShadows",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "receiveShadows",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "vert",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "frag",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "uniforms",
+          "public": false,
+          "value": null,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "mFqmeJMvKB",
+      "name": "Geometry",
+      "x": 375,
+      "y": 1065,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "R45ptrRXz",
+            "port": "out"
+          }
+        },
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            0,
+            0.5,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "scale",
+          "public": false,
+          "value": [
+            1,
+            1,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "geometry",
+          "public": false,
+          "script": "",
+          "source": {
+            "id": "qstFZ3ND1N",
+            "port": "geometry"
+          }
+        },
+        {
+          "name": "tags",
+          "public": false,
+          "value": "",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "qstFZ3ND1N",
+      "name": "Cube",
+      "x": 435,
+      "y": 1020,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "sx",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "sy",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "sz",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "nx",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "ny",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "nz",
+          "public": false,
+          "value": 1,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "TfqL0XnSj",
+      "name": "DirectionalLight",
+      "x": 60,
+      "y": 915,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "h_iXQdLT6",
+            "port": "out"
+          }
+        },
+        {
+          "name": "tags",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            0,
+            5.6,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            -287.4,
+            -17.2,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "color",
+          "public": false,
+          "value": [
+            1,
+            1,
+            1,
+            1.8
+          ],
+          "script": ""
+        },
+        {
+          "name": "intensity",
+          "public": false,
+          "value": 1.8,
+          "script": ""
+        },
+        {
+          "name": "castShadows",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "bias",
+          "public": false,
+          "value": 0.1,
+          "script": ""
+        },
+        {
+          "name": "showGizmo",
+          "public": false,
+          "value": false,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "_rKc1og68k",
+      "name": "Texture HDR",
+      "x": 150,
+      "y": 975,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "n7qdLwW1OX",
+      "name": "Skybox",
+      "x": 60,
+      "y": 1020,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "h_iXQdLT6",
+            "port": "out"
+          }
+        },
+        {
+          "name": "sunPosition",
+          "public": false,
+          "value": [
+            0,
+            1.88,
+            5
+          ],
+          "script": ""
+        },
+        {
+          "name": "texture",
+          "public": false,
+          "script": ""
+        },
+        {
+          "name": "diffuseTexture",
+          "public": false,
+          "script": ""
+        },
+        {
+          "name": "backgroundBlur",
+          "public": false,
+          "value": false,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "pdnE2A28V-",
+      "name": "ReflectionProbe",
+      "x": 60,
+      "y": 1095,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "n7qdLwW1OX",
+            "port": "out"
+          }
+        },
+        {
+          "name": "update",
+          "public": false,
+          "source": {
+            "id": "n7qdLwW1OX",
+            "port": "changed"
+          }
+        },
+        {
+          "name": "origin",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "size",
+          "public": false,
+          "value": [
+            10.2,
+            8.7,
+            10
+          ],
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "iTkXINlqB",
+      "name": "Camera",
+      "x": 240,
+      "y": 1020,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "h_iXQdLT6",
+            "port": "out"
+          }
+        },
+        {
+          "name": "tags",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            4.271614645214671,
+            1.5231667936366344,
+            0.3230634040071574
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            -122.7213445149156,
+            62.86995832505385,
+            125.8273241940612
+          ],
+          "script": ""
+        },
+        {
+          "name": "resetView",
+          "public": true,
+          "script": ""
+        },
+        {
+          "name": "backgroundColor",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "fov",
+          "public": false,
+          "value": 45,
+          "script": ""
+        },
+        {
+          "name": "near",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "far",
+          "public": false,
+          "value": 100,
+          "script": ""
+        },
+        {
+          "name": "viewport",
+          "public": false,
+          "value": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "showGizmo",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "exposure",
+          "public": false,
+          "value": 0.8,
+          "script": ""
+        },
+        {
+          "name": "postprocess",
+          "public": true,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "fxaa",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "ssao",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "ssaoIntensity",
+          "public": false,
+          "value": 1.7,
+          "script": ""
+        },
+        {
+          "name": "ssaoRadius",
+          "public": false,
+          "value": 4.6,
+          "script": ""
+        },
+        {
+          "name": "ssaoBias",
+          "public": false,
+          "value": 0.01,
+          "script": ""
+        },
+        {
+          "name": "ssaoBlurRadius",
+          "public": false,
+          "value": 0,
+          "script": ""
+        },
+        {
+          "name": "ssaoBlurSharpness",
+          "public": false,
+          "value": 7,
+          "script": ""
+        },
+        {
+          "name": "bloom",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "bloomThreshold",
+          "public": false,
+          "value": 2,
+          "script": ""
+        },
+        {
+          "name": "bloomIntensity",
+          "public": false,
+          "value": 0.1,
+          "script": ""
+        },
+        {
+          "name": "bloomRadius",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "DoF",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "dofRadius",
+          "public": false,
+          "value": 2.65,
+          "script": ""
+        },
+        {
+          "name": "dofDepth",
+          "public": false,
+          "value": 11.8,
+          "script": ""
+        },
+        {
+          "name": "dofRange",
+          "public": false,
+          "value": 1.8,
+          "script": ""
+        },
+        {
+          "name": "fog",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "sunDispertion",
+          "public": false,
+          "value": 0.2,
+          "script": ""
+        },
+        {
+          "name": "sunIntensity",
+          "public": false,
+          "value": 0.1,
+          "script": ""
+        },
+        {
+          "name": "inscatteringCoeffs",
+          "public": false,
+          "value": [
+            0.3,
+            0.3,
+            0.3
+          ],
+          "script": ""
+        },
+        {
+          "name": "fogColor",
+          "public": false,
+          "value": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "script": ""
+        },
+        {
+          "name": "fogStart",
+          "public": false,
+          "value": 5,
+          "script": ""
+        },
+        {
+          "name": "fogDensity",
+          "public": false,
+          "value": 0.15,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "rQE54YoVJ",
+      "name": "Transform",
+      "x": 270,
+      "y": 1185,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "h_iXQdLT6",
+            "port": "out"
+          }
+        },
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            0,
+            -0.05,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "scale",
+          "public": false,
+          "value": [
+            1,
+            1,
+            1
+          ],
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "yydyP3kPmt",
+      "name": "Material",
+      "x": 285,
+      "y": 1230,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "rQE54YoVJ",
+            "port": "out"
+          }
+        },
+        {
+          "name": "baseColor",
+          "public": true,
+          "value": [
+            0.9999999999999524,
+            1.000000000000017,
+            1.0000000000000127,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "emissiveColor",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "roughness",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "metallic",
+          "public": false,
+          "value": 0,
+          "script": ""
+        },
+        {
+          "name": "baseColorMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "emissiveColorMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "normalMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "metallicMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "roughnessMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "wireframe",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "castShadows",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "receiveShadows",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "vert",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "frag",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "uniforms",
+          "public": false,
+          "value": null,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "QxGk9NDyBu",
+      "name": "Geometry",
+      "x": 285,
+      "y": 1320,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "yydyP3kPmt",
+            "port": "out"
+          }
+        },
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "scale",
+          "public": false,
+          "value": [
+            1,
+            1,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "geometry",
+          "public": false,
+          "script": "",
+          "source": {
+            "id": "ItWiWIyUOr",
+            "port": "geometry"
+          }
+        },
+        {
+          "name": "tags",
+          "public": false,
+          "value": "",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "ItWiWIyUOr",
+      "name": "Cube",
+      "x": 345,
+      "y": 1275,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "sx",
+          "public": false,
+          "value": 14,
+          "script": ""
+        },
+        {
+          "name": "sy",
+          "public": false,
+          "value": 0.1,
+          "script": ""
+        },
+        {
+          "name": "sz",
+          "public": false,
+          "value": 14,
+          "script": ""
+        },
+        {
+          "name": "nx",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "ny",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "nz",
+          "public": false,
+          "value": 1,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "p6zfpEiRx",
+      "name": "DirectionalLight",
+      "x": 15,
+      "y": 855,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "tags",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            0,
+            5.6,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            -259.2,
+            -32,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "color",
+          "public": false,
+          "value": [
+            0.9488864696518685,
+            0.7943281636614183,
+            0.3643776563840786,
+            10
+          ],
+          "script": ""
+        },
+        {
+          "name": "intensity",
+          "public": false,
+          "value": 10,
+          "script": ""
+        },
+        {
+          "name": "castShadows",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "bias",
+          "public": false,
+          "value": 0.1,
+          "script": ""
+        },
+        {
+          "name": "showGizmo",
+          "public": false,
+          "value": false,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "q7QFF56vh",
+      "name": "LoadGLTF",
+      "x": 330,
+      "y": 1155,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "lLkkzDMkC",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "W-5_YiFRa",
+      "name": "Dom Renderer",
+      "x": 960,
+      "y": 675,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "8U0sxHq_mz",
+            "port": "out3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "r3Vwc7eWb",
+      "name": "ui-Button",
+      "x": 960,
+      "y": 915,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "25buLl4N7",
+            "port": "out"
+          }
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "lfvoZf6YcH",
+      "name": "ClickHandler",
+      "x": 900,
+      "y": 960,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "r3Vwc7eWb",
+            "port": "click"
+          }
+        }
+      ]
+    },
+    {
+      "id": "-B-qqbe1MT",
+      "name": "Sequence",
+      "x": 1575,
+      "y": 570,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "xvJwM5yDv",
+      "name": "Panel",
+      "x": 960,
+      "y": 825,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "FguiEpreP",
+            "port": "out"
+          }
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "pa2 bg-white overflow-y-scroll h-50",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "Qw8g1HCsRW",
+      "name": "ui-Column",
+      "x": 1635,
+      "y": 630,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "ratios",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "bg-white  pa2 ",
+          "script": ""
+        },
+        {
+          "name": "childClasses",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "showBorders",
+          "public": false,
+          "value": false,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "1xX4L8jDC6",
+      "name": "ui-Label",
+      "x": 975,
+      "y": 1005,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "r3Vwc7eWb",
+            "port": "out"
+          }
+        },
+        {
+          "name": "text",
+          "public": false,
+          "value": "Houston Power Grid",
+          "script": ""
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "entity.name",
+          "script": ""
+        },
+        {
+          "name": "altDataPath",
+          "public": false,
+          "value": "entity.id",
+          "script": ""
+        },
+        {
+          "name": "paddingFromProp",
+          "public": false,
+          "value": "padding",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "f6 avenir pv1 dim pointer",
+          "script": ""
+        },
+        {
+          "name": "fontFamily",
+          "public": false,
+          "value": "Regular",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "pIDPlbxjDo",
+      "name": "ui-Label",
+      "x": 1635,
+      "y": 825,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "Ze7HgZ2Vq-",
+            "port": "out5"
+          }
+        },
+        {
+          "name": "text",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "hoverCity.country",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "ttu ",
+          "script": ""
+        },
+        {
+          "name": "fontFamily",
+          "public": false,
+          "value": "Light",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "lcB3-MPEWJ",
+      "name": "ui-Row",
+      "x": 1635,
+      "y": 660,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "Qw8g1HCsRW",
+            "port": "out"
+          }
+        },
+        {
+          "name": "ratios",
+          "public": false,
+          "value": "25px,*",
+          "script": ""
+        },
+        {
+          "name": "showBorders",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "pa2",
+          "script": ""
+        },
+        {
+          "name": "childClasses",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "backgroundColor",
+          "public": false,
+          "value": "",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "yMI_dPrTEI",
+      "name": "ui-Column",
+      "x": 1635,
+      "y": 690,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "lcB3-MPEWJ",
+            "port": "out"
+          }
+        },
+        {
+          "name": "ratios",
+          "public": false,
+          "value": "1,1",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "bl",
+          "script": ""
+        },
+        {
+          "name": "childClasses",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "showBorders",
+          "public": false,
+          "value": false,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "ILxniEa3o5",
+      "name": "ui-Column",
+      "x": 1635,
+      "y": 750,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "lcB3-MPEWJ",
+            "port": "out"
+          }
+        },
+        {
+          "name": "ratios",
+          "public": false,
+          "value": "1,1",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "childClasses",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "showBorders",
+          "public": false,
+          "value": false,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "Ze7HgZ2Vq-",
+      "name": "Sequence",
+      "x": 1635,
+      "y": 780,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "ILxniEa3o5",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "XhjmLL6Wwy",
+      "name": "ui-Image",
+      "x": 1635,
+      "y": 720,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "yMI_dPrTEI",
+            "port": "out"
+          }
+        },
+        {
+          "name": "src",
+          "public": false,
+          "value": "assets/dots.svg",
+          "script": ""
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "width",
+          "public": false,
+          "value": 0,
+          "script": ""
+        },
+        {
+          "name": "height",
+          "public": false,
+          "value": 15,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "2aumIIdHNA",
+      "name": "ui-Image",
+      "x": 1635,
+      "y": 885,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "src",
+          "public": false,
+          "value": "assets/journey-houston.jpg",
+          "script": ""
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "hoverCity.image",
+          "script": ""
+        },
+        {
+          "name": "width",
+          "public": false,
+          "value": 300,
+          "script": ""
+        },
+        {
+          "name": "height",
+          "public": false,
+          "value": 0,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "SNq2q8Tqw",
+      "name": "state-Switch",
+      "x": 1140,
+      "y": 930,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "vCX-UMsiT",
+            "port": "out"
+          }
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "selectedEntity",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "FguiEpreP",
+      "name": "dataProvider",
+      "x": 960,
+      "y": 720,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "25buLl4N7",
+      "name": "data-Sequence",
+      "x": 960,
+      "y": 870,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "xvJwM5yDv",
+            "port": "out"
+          }
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "entities",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "vCX-UMsiT",
+      "name": "Panel",
+      "x": 1125,
+      "y": 825,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "FguiEpreP",
+            "port": "out"
+          }
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "pa2 bg-white overflow-y-scroll",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "rm69kAj9r",
+      "name": "ui-Label",
+      "x": 1140,
+      "y": 1080,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "Iau6gvQO1",
+            "port": "out1"
+          }
+        },
+        {
+          "name": "text",
+          "public": false,
+          "value": "Houston Power Grid",
+          "script": ""
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "selectedEntity.name",
+          "script": ""
+        },
+        {
+          "name": "altDataPath",
+          "public": false,
+          "value": "entity.id",
+          "script": ""
+        },
+        {
+          "name": "paddingFromProp",
+          "public": false,
+          "value": "padding",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "b f6 avenir pv1 dim pointer",
+          "script": ""
+        },
+        {
+          "name": "fontFamily",
+          "public": false,
+          "value": "Regular",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "AFt3PzD53",
+      "name": "data-Sequence",
+      "x": 1335,
+      "y": 1065,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "Iau6gvQO1",
+            "port": "out2"
+          }
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "selectedEntity.components",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "Iau6gvQO1",
+      "name": "Sequence",
+      "x": 1155,
+      "y": 990,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "SNq2q8Tqw",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "FVTs1LoeK",
+      "name": "ui-Label",
+      "x": 1335,
+      "y": 1245,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "YNNQIAL7P",
+            "port": "out1"
+          }
+        },
+        {
+          "name": "text",
+          "public": false,
+          "value": "Houston Power Grid",
+          "script": ""
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "type",
+          "script": ""
+        },
+        {
+          "name": "altDataPath",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "paddingFromProp",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "f6 avenir pv1 dim pointer",
+          "script": ""
+        },
+        {
+          "name": "fontFamily",
+          "public": false,
+          "value": "Regular",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "YNNQIAL7P",
+      "name": "Sequence",
+      "x": 1335,
+      "y": 1170,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "AFt3PzD53",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4j5J702r4",
+      "name": "state-Switch",
+      "x": 1500,
+      "y": 1245,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "YNNQIAL7P",
+            "port": "out2"
+          }
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "type",
+          "script": ""
+        },
+        {
+          "name": "dataValue",
+          "public": false,
+          "value": "Geometry",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "wOxgrwlVm",
+      "name": "ui-Label",
+      "x": 1500,
+      "y": 1305,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "4j5J702r4",
+            "port": "out"
+          }
+        },
+        {
+          "name": "text",
+          "public": false,
+          "value": "Houston Power Grid",
+          "script": ""
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "indices.count",
+          "script": ""
+        },
+        {
+          "name": "altDataPath",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "paddingFromProp",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "pl2 f6 avenir pv1 dim pointer",
+          "script": ""
+        },
+        {
+          "name": "fontFamily",
+          "public": false,
+          "value": "Regular",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "0cQElQv9H",
+      "name": "ui-Label",
+      "x": 1515,
+      "y": 1350,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "text",
+          "public": false,
+          "value": "Houston Power Grid",
+          "script": ""
+        },
+        {
+          "name": "dataPath",
+          "public": false,
+          "value": "cells.length",
+          "script": ""
+        },
+        {
+          "name": "altDataPath",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "paddingFromProp",
+          "public": false,
+          "value": "",
+          "script": ""
+        },
+        {
+          "name": "classes",
+          "public": false,
+          "value": "pl2 f6 avenir pv1 dim pointer",
+          "script": ""
+        },
+        {
+          "name": "fontFamily",
+          "public": false,
+          "value": "Regular",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "50TwoUPpb",
+      "name": "Geometry",
+      "x": 375,
+      "y": 1620,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            -14,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "scale",
+          "public": false,
+          "value": [
+            -8.2,
+            1,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "geometry",
+          "public": false,
+          "script": "",
+          "source": {
+            "id": "qstFZ3ND1N",
+            "port": "geometry"
+          }
+        },
+        {
+          "name": "tags",
+          "public": false,
+          "value": "",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "Fac77vXLm",
+      "name": "Material",
+      "x": 315,
+      "y": 1545,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "baseColor",
+          "public": true,
+          "value": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "emissiveColor",
+          "public": false,
+          "value": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "roughness",
+          "public": false,
+          "value": 1,
+          "script": ""
+        },
+        {
+          "name": "metallic",
+          "public": false,
+          "value": 0,
+          "script": ""
+        },
+        {
+          "name": "baseColorMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "emissiveColorMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "normalMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "metallicMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "roughnessMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "wireframe",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "castShadows",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "receiveShadows",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "vert",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "frag",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "uniforms",
+          "public": false,
+          "value": null,
+          "script": "{ uOffsetTex: $ }"
+        }
+      ]
+    },
+    {
+      "id": "EoXePk7Li",
+      "name": "Particle Mesh Emitter",
+      "x": 570,
+      "y": 1320,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "h_iXQdLT6",
+            "port": "out"
+          }
+        },
+        {
+          "name": "entity",
+          "public": false,
+          "value": null,
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "ay1WFBlgO",
+      "name": "Find Entity By Component",
+      "x": 825,
+      "y": 1140,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "8U0sxHq_mz",
+            "port": "out2"
+          }
+        },
+        {
+          "name": "componentType",
+          "public": false,
+          "value": "Skin",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "371lPzglU",
+      "name": "Render Vertices To Texture",
+      "x": 825,
+      "y": 1485,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "8dEAG2le1",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EgRWSwy1Q",
+      "name": "Find Animation By Mesh Name",
+      "x": 1050,
+      "y": 1140,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "entityName",
+          "public": false,
+          "value": "mesh",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "NYYj7Bt3G",
+      "name": "Get Entity Component",
+      "x": 825,
+      "y": 1185,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "ay1WFBlgO",
+            "port": "out"
+          }
+        },
+        {
+          "name": "componentType",
+          "public": false,
+          "value": "Skin",
+          "script": ""
+        },
+        {
+          "name": "propName",
+          "public": false,
+          "value": "skin",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "d5pJMZ84g",
+      "name": "Get Entity Component",
+      "x": 825,
+      "y": 1230,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "NYYj7Bt3G",
+            "port": "out"
+          }
+        },
+        {
+          "name": "componentType",
+          "public": false,
+          "value": "Geometry",
+          "script": ""
+        },
+        {
+          "name": "propName",
+          "public": false,
+          "value": "geometry",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "oEv8tyhV_",
+      "name": "Get Entity Component",
+      "x": 825,
+      "y": 1335,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "3L-JO258b",
+            "port": "out"
+          }
+        },
+        {
+          "name": "componentType",
+          "public": false,
+          "value": "Animation",
+          "script": ""
+        },
+        {
+          "name": "propName",
+          "public": false,
+          "value": "animation",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "LmiNHAvQn",
+      "name": "Instances from Texture vert",
+      "x": 660,
+      "y": 1380,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "0Q-DaCaqG",
+      "name": "Find Entity By Name",
+      "x": 1125,
+      "y": 1230,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "entityName",
+          "public": false,
+          "value": "mesh",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "3L-JO258b",
+      "name": "Find Entity By Component",
+      "x": 825,
+      "y": 1290,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "Pxcq395gV",
+            "port": "out"
+          }
+        },
+        {
+          "name": "componentType",
+          "public": false,
+          "value": "Animation",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "lLkkzDMkC",
+      "name": "Transform",
+      "x": 330,
+      "y": 1110,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "h_iXQdLT6",
+            "port": "out"
+          }
+        },
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "scale",
+          "public": false,
+          "value": [
+            1,
+            1,
+            1
+          ],
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "8dEAG2le1",
+      "name": "Get Entity Component",
+      "x": 825,
+      "y": 1425,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "0CAbaIHKtq",
+            "port": "out"
+          }
+        },
+        {
+          "name": "componentType",
+          "public": false,
+          "value": "Camera",
+          "script": ""
+        },
+        {
+          "name": "propName",
+          "public": false,
+          "value": "camera",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "0CAbaIHKtq",
+      "name": "Find Entity By Component",
+      "x": 825,
+      "y": 1380,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "oEv8tyhV_",
+            "port": "out"
+          }
+        },
+        {
+          "name": "componentType",
+          "public": false,
+          "value": "Camera",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "kmeUdRPYe",
+      "name": "Render Vertices To Screen",
+      "x": 900,
+      "y": 1530,
+      "templateName": "Custom",
+      "params": []
+    },
+    {
+      "id": "Pxcq395gV",
+      "name": "Get Entity Component",
+      "x": 825,
+      "y": 1260,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "d5pJMZ84g",
+            "port": "out"
+          }
+        },
+        {
+          "name": "componentType",
+          "public": false,
+          "value": "Transform",
+          "script": ""
+        },
+        {
+          "name": "propName",
+          "public": false,
+          "value": "transform",
+          "script": ""
+        }
+      ]
+    },
+    {
+      "id": "9YCQkxrSw",
+      "name": "Material",
+      "x": 585,
+      "y": 1530,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "EoXePk7Li",
+            "port": "out"
+          }
+        },
+        {
+          "name": "baseColor",
+          "public": true,
+          "value": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "emissiveColor",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "roughness",
+          "public": false,
+          "value": 0.2,
+          "script": ""
+        },
+        {
+          "name": "metallic",
+          "public": false,
+          "value": 0.2,
+          "script": ""
+        },
+        {
+          "name": "baseColorMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "emissiveColorMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "normalMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "metallicMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "roughnessMap",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "wireframe",
+          "public": false,
+          "value": false,
+          "script": ""
+        },
+        {
+          "name": "castShadows",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "receiveShadows",
+          "public": false,
+          "value": true,
+          "script": ""
+        },
+        {
+          "name": "vert",
+          "public": false,
+          "script": "",
+          "source": {
+            "id": "LmiNHAvQn",
+            "port": "vert"
+          }
+        },
+        {
+          "name": "frag",
+          "public": false,
+          "value": null,
+          "script": ""
+        },
+        {
+          "name": "uniforms",
+          "public": false,
+          "script": "{ uOffsetTex: $ }",
+          "source": {
+            "id": "371lPzglU",
+            "port": "texture"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACWJ0v2zy",
+      "name": "Geometry",
+      "x": 570,
+      "y": 1680,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "public": false,
+          "source": {
+            "id": "9YCQkxrSw",
+            "port": "out"
+          }
+        },
+        {
+          "name": "position",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "rotation",
+          "public": false,
+          "value": [
+            0,
+            0,
+            0
+          ],
+          "script": ""
+        },
+        {
+          "name": "scale",
+          "public": false,
+          "value": [
+            1,
+            1,
+            1
+          ],
+          "script": ""
+        },
+        {
+          "name": "geometry",
+          "public": false,
+          "script": "",
+          "source": {
+            "id": "EoXePk7Li",
+            "port": "geom"
+          }
+        },
+        {
+          "name": "tags",
+          "public": false,
+          "value": "",
+          "script": ""
+        }
+      ]
+    }
+  ],
+  "commentBoxes": [
+    {
+      "x": 393.1548475517027,
+      "y": 759.4734659769401,
+      "fontSize": 10,
+      "backgroundColor": [
+        0.5161535874894503,
+        0.5161535874894652,
+        0.5161535874894663,
+        0.2
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "Modified version that doesn't clean entities until next frame",
+      "width": 180,
+      "height": 50,
+      "selected": false,
+      "collapseFlags": {
+        "backgroundColor": false,
+        "text": false
+      },
+      "dx": 95.67981082227925,
+      "dy": 18.224725870910333
+    }
+  ]
+}

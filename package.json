@@ -13,6 +13,7 @@
     "@thi.ng/paths": "^2.0.9",
     "canvas-screenshot": "^1.1.1",
     "fit-rect": "^1.0.3",
+    "hsluv": "0.0.3",
     "pex-cam": "^2.7.1",
     "pex-color": "^1.1.1",
     "pex-context": "^2.8.0",

@@ -23,8 +23,8 @@ async function loadScene (url) {
   console.log('loaded', root, scene)  
 }
 
-// loadScene('assets/ballet/ballet.gltf')
-loadScene('assets/CesiumMan/CesiumMan.gltf')
+loadScene('assets/ballet/ballet.gltf')
+// loadScene('assets/CesiumMan/CesiumMan.gltf')
 // loadScene('assets/RiggedSimple/RiggedSimple.gltf')
 
 triggerIn.onTrigger = (props) => {

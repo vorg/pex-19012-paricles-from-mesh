@@ -7,7 +7,13 @@ const random = require('pex-random')
 const createCube = require('primitive-cube')
 
 const texSize = 256
-const g = createCube(0.02)
+var g = createCube(0.02)
+// g = {
+//   positions: [[0, 0, 0]],
+//   normals: [[0, 0, 0]],
+//   uvs: [[0, 0]],
+//   cells: [0]
+// }
 g.instances = texSize * texSize / 2
 var offsets = []
 var uvIndex = 0

@@ -7,12 +7,22 @@
   "graphMetadata": {
     "particles-01": {
       "offset": [
-        -800.6086321073434,
-        -1393.9042224184923
+        -670.5270454866536,
+        -1461.1070571868347
       ],
-      "zoomLevel": 1.183247361166888,
+      "zoomLevel": 1.0043617577148305,
       "sceneRatio": 0.6,
       "canvasRatio": 0.4,
+      "layout": "default"
+    },
+    "particles-02": {
+      "offset": [
+        -31.897040491042816,
+        -722.9530682263219
+      ],
+      "zoomLevel": 0.4428249366017732,
+      "sceneRatio": 0.6,
+      "canvasRatio": 0.46547884187082406,
       "layout": "default"
     }
   }

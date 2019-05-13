@@ -1,8 +1,9 @@
 {
   "name": "PEX-19012-Paricles-from-Mesh",
   "dependencies": [
-    "@thi.ng/paths",
+    "hsluv",
     "@thi.ng/hdom",
+    "@thi.ng/paths",
     "canvas-screenshot",
     "fit-rect",
     "pex-cam",

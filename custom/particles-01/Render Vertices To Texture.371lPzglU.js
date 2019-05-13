@@ -80,6 +80,7 @@ const drawCmd = {
     aWeight.w * uJointMat[int(aJoint.w)];           
         // exploded mesh
         vPosition = skinMat * vec4(position, 1.0); 
+        vPosition.xyz /= vPosition.w;
         // vPosition = vec4(position / 100.0, 1.0); 
         // perfect mesh
         // vPosition = vec4(aPosition / 100.0, 1.0);
@@ -159,7 +160,7 @@ triggerIn.onTrigger = (props) => {
         uViewMatrix: props.camera.viewMatrix,
         uViewMatrix: props.camera.viewMatrix,
         uProjectionMatrix: props.camera.projectionMatrix,
-        uIndexOffset: 0//count * frame
+        uIndexOffset: count * frame
       }
     })
     frame = (frame + 1) % 20
